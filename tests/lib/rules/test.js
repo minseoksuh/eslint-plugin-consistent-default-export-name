@@ -5,11 +5,15 @@ const rule = require("../../../lib/rules/test"),
 
 const ruleTester = new RuleTester();
 
+const exportedEs6VariableCode = "export default exported;"
+
 ruleTester.run("test", rule, {
     valid: [
         {
-            code: "var foo = true",
-        }
+            code: exportedEs6VariableCode,
+            filename: "/some/dir/exported.js",
+            parserOptions: { ecmaVersion: 6, sourceType: "module" },
+        },
     ],
 
     invalid: [
