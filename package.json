@@ -1,26 +1,29 @@
 {
-  "name": "eslint-plugin-consistent-default-export-name",
-  "version": "0.0.0",
-  "description": "default-export-name = default-import-name = filename",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
-  "author": "minseoksuh",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "mocha tests --recursive"
-  },
-  "dependencies": {
-    "requireindex": "~1.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.1.0",
-    "mocha": "^7.2.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "license": "ISC"
+    "name": "eslint-plugin-consistent-default-export-name",
+    "version": "0.0.0",
+    "description": "default-export-name = default-import-name = filename",
+    "keywords": [
+        "eslint",
+        "eslintplugin",
+        "eslint-plugin"
+    ],
+    "author": "minseoksuh",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "mocha tests --recursive"
+    },
+    "dependencies": {
+        "requireindex": "~1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "mocha": "^7.2.0",
+        "prettier": "2.3.2"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "license": "ISC"
 }
