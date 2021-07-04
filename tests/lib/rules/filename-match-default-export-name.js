@@ -1,4 +1,4 @@
-import rule from '../../../lib/rules/filename-default-export.js';
+import rule from '../../../lib/rules/filename-match-default-export-name.js';
 import { RuleTester } from 'eslint';
 
 console.log({ rule });
