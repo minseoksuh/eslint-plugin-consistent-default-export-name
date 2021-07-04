@@ -23,7 +23,7 @@ ruleTester.run('test', rule, {
             parserOptions: { ecmaVersion: 6, sourceType: 'module' },
             errors: [
                 {
-                    message: 'default export name and filename does not match',
+                    message: 'filename does not match default export name',
                     column: 1,
                     line: 1,
                 },
