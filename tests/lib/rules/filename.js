@@ -1,4 +1,4 @@
-const rule = require('../../../lib/rules/filename-match-default-export-name.js');
+const rule = require('../../../lib/rules/filename.js');
 const { RuleTester } = require('eslint');
 
 console.log({ rule });

@@ -1,7 +1,7 @@
 const { RuleTester } = require('eslint');
 // const path = require('path');
 
-const rule = require('../../../lib/rules/default-import-name-match-default-export-name.js');
+const rule = require('../../../lib/rules/default-import-name.js');
 
 // function testFilePath(relativePath) {
 //     return path.join(process.cwd(), './tests/files', relativePath);
