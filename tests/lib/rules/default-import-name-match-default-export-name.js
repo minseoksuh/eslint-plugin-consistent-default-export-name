@@ -1,11 +1,11 @@
-import { RuleTester } from 'eslint';
-import path from 'path';
+const { RuleTester } = require('eslint');
+// const path = require('path');
 
-import rule from '../../../lib/rules/default-import-name-match-default-export-name.js';
+const rule = require('../../../lib/rules/default-import-name-match-default-export-name.js');
 
-export function testFilePath(relativePath) {
-    return path.join(process.cwd(), './tests/files', relativePath);
-}
+// function testFilePath(relativePath) {
+//     return path.join(process.cwd(), './tests/files', relativePath);
+// }
 
 const ruleTester = new RuleTester({
     parserOptions: {

@@ -1,5 +1,5 @@
-import rule from '../../../lib/rules/filename-match-default-export-name.js';
-import { RuleTester } from 'eslint';
+const rule = require('../../../lib/rules/filename-match-default-export-name.js');
+const { RuleTester } = require('eslint');
 
 console.log({ rule });
 
