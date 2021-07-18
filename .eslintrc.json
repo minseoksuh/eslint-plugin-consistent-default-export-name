@@ -1,8 +1,15 @@
 {
-    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:prettier/recommended"
+    ],
     "env": {
         "browser": true,
         "node": true,
         "es6": true
+    },
+    "rules": {
+        "import/no-unresolved": [2, { "commonjs": true }]
     }
 }
