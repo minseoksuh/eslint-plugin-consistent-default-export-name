@@ -1,10 +1,10 @@
-const sinon = require('sinon');
-const { beforeEach, afterEach } = require('mocha');
+// const sinon = require('sinon');
+// const { beforeEach, afterEach } = require('mocha');
 
-beforeEach(function () {
-    sinon.stub(process, 'cwd').returns('/foo');
-});
+// beforeEach(function () {
+//     sinon.stub(process, 'cwd').returns('/foo');
+// });
 
-afterEach(function () {
-    process.cwd.restore();
-});
+// afterEach(function () {
+//     process.cwd.restore();
+// });

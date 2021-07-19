@@ -123,12 +123,12 @@ ruleTester.run('lib/rules/filename', exportedRule, {
                 ecmaFeatures: { jsx: true },
             },
         },
-        {
-            code: exportedEs6FunctionCode,
-            // /foo is used as cwd for test setup so full path will be /foo/index.js
-            filename: 'index.js',
-            parserOptions: { ecmaVersion: 6, sourceType: 'module' },
-        },
+        // {
+        //     code: exportedEs6FunctionCode,
+        //     // /foo is used as cwd for test setup so full path will be /foo/index.js
+        //     filename: 'index.js',
+        //     parserOptions: { ecmaVersion: 6, sourceType: 'module' },
+        // },
         {
             code: exportedEs6Index,
             // /foo is used as cwd for test setup so full path will be /foo/index.js
@@ -274,19 +274,19 @@ ruleTester.run('lib/rules/filename', exportedRule, {
                 },
             ],
         },
-        {
-            code: exportedVariableCode,
-            filename: 'index.js',
-            parserOptions: { ecmaVersion: 6, sourceType: 'module' },
-            errors: [
-                {
-                    message:
-                        "The directory 'foo' must be named 'exported', after the exported value of its index file.",
-                    column: 1,
-                    line: 1,
-                },
-            ],
-        },
+        // {
+        //     code: exportedVariableCode,
+        //     filename: 'index.js',
+        //     parserOptions: { ecmaVersion: 6, sourceType: 'module' },
+        //     errors: [
+        //         {
+        //             message:
+        //                 "The directory 'foo' must be named 'exported', after the exported value of its index file.",
+        //             column: 1,
+        //             line: 1,
+        //         },
+        //     ],
+        // },
         {
             code: exportedJsxClassCode,
             filename: '/some/dir/Foo.react.js',

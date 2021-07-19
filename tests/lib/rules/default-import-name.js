@@ -1,13 +1,16 @@
 const { RuleTester } = require('eslint');
-// import { testFilePath } from '../utils';
 
 const rule = require('../../../lib/rules/default-import-name');
 
-// const path = require('path');
+const path = require('path');
 
-// function testFilePath(relativePath) {
-//     return path.join(process.cwd(), './tests/files', relativePath);
-// }
+function testFilePath(relativePath) {
+    console.log(
+        process.cwd(),
+        path.join(process.cwd(), './tests/files', relativePath)
+    );
+    return path.join(process.cwd(), './tests/files', relativePath);
+}
 
 const ruleTester = new RuleTester({
     parserOptions: {
@@ -82,57 +85,57 @@ ruleTester.run('default-import-match-filename', rule, {
         'const cat = require("./cat/index.js")',
         'const doge = require("cat")',
         'const {f, g} = require("./cat")',
-        // {
-        //     code: `import whatever from './ignored/foo.js'`,
-        //     filename: testFilePath('default-import-match-filename/main.js'),
-        //     options: [{ ignorePaths: ['**/ignored/*.js'] }],
-        // },
-        // {
-        //     code: `import whatever from '../ignored/foo.js'`,
-        //     filename: testFilePath(
-        //         'default-import-match-filename/some-directory/a.js'
-        //     ),
-        //     options: [{ ignorePaths: ['**/ignored/*.js'] }],
-        // },
-        // {
-        //     code: `import whatever from './ignored/foo.js'`,
-        //     filename: testFilePath('default-import-match-filename/main.js'),
-        //     options: [{ ignorePaths: ['**/foo.js'] }],
-        // },
-        // {
-        //     code: `import whatever from './some-directory/a.js'`,
-        //     filename: testFilePath('default-import-match-filename/main.js'),
-        //     // This test should be ran with project root as process.cwd().
-        //     options: [
-        //         {
-        //             ignorePaths: [
-        //                 'tests/files/default-import-match-filename/some-directory/a.js',
-        //             ],
-        //         },
-        //     ],
-        // },
-        //     {
-        //         code: `
-        //     import someDirectory from ".";
-        //     import someDirectory_ from "./";
-        //     const someDirectory__ = require('.');
-        //   `,
-        //         filename: testFilePath(
-        //             'default-import-match-filename/some-directory/a.js'
-        //         ),
-        //     },
-        //     {
-        //         code: `
-        //     import packageName from "..";
-        //     import packageName_ from "../";
-        //     import packageName__ from "./..";
-        //     import packageName___ from "./../";
-        //     const packageName____ = require('..');
-        //   `,
-        //         filename: testFilePath(
-        //             'default-import-match-filename/some-directory/a.js'
-        //         ),
-        //     },
+        {
+            code: `import whatever from './ignored/foo.js'`,
+            filename: testFilePath('default-import-match-filename/main.js'),
+            options: [{ ignorePaths: ['**/ignored/*.js'] }],
+        },
+        {
+            code: `import whatever from '../ignored/foo.js'`,
+            filename: testFilePath(
+                'default-import-match-filename/some-directory/a.js'
+            ),
+            options: [{ ignorePaths: ['**/ignored/*.js'] }],
+        },
+        {
+            code: `import whatever from './ignored/foo.js'`,
+            filename: testFilePath('default-import-match-filename/main.js'),
+            options: [{ ignorePaths: ['**/foo.js'] }],
+        },
+        {
+            code: `import whatever from './some-directory/a.js'`,
+            filename: testFilePath('default-import-match-filename/main.js'),
+            // This test should be ran with project root as process.cwd().
+            options: [
+                {
+                    ignorePaths: [
+                        'tests/files/default-import-match-filename/some-directory/a.js',
+                    ],
+                },
+            ],
+        },
+        {
+            code: `
+            import someDirectory from ".";
+            import someDirectory_ from "./";
+            const someDirectory__ = require('.');
+          `,
+            filename: testFilePath(
+                'default-import-match-filename/some-directory/a.js'
+            ),
+        },
+        {
+            code: `
+            import packageName from "..";
+            import packageName_ from "../";
+            import packageName__ from "./..";
+            import packageName___ from "./../";
+            const packageName____ = require('..');
+          `,
+            filename: testFilePath(
+                'default-import-match-filename/some-directory/a.js'
+            ),
+        },
         {
             code: 'import doge from "../index.js"',
             filename: 'doge/a/a.js',
@@ -239,30 +242,30 @@ ruleTester.run('default-import-match-filename', rule, {
         fail('const doge = require("./cat/index")', 'cat/'),
         fail('const doge = require("./cat/index.js")', 'cat/'),
         fail('const doge = require("../models/cat")', 'cat'),
-        // fail(
-        //     'import nope from "."',
-        //     'some-directory',
-        //     testFilePath('default-import-match-filename/some-directory/a.js')
-        // ),
-        // fail(
-        //     'import nope from ".."',
-        //     'package-name',
-        //     testFilePath('default-import-match-filename/some-directory/a.js')
-        // ),
-        // fail(
-        //     'import nope from "../../index.js"',
-        //     'package-name',
-        //     testFilePath(
-        //         'default-import-match-filename/some-directory/foo/a.js'
-        //     )
-        // ),
-        // {
-        //     code: `import wrongName from './some-directory/a.js';`,
-        //     output: `import wrongName from './some-directory/a.js';`,
-        //     filename: testFilePath('default-import-match-filename/main.js'),
-        //     options: [{ ignorePaths: ['**/b.js', 'a.js', './a.js'] }],
-        //     errors: [{ message: getMessage('a.js') }],
-        // },
+        fail(
+            'import nope from "."',
+            'some-directory',
+            testFilePath('default-import-match-filename/some-directory/a.js')
+        ),
+        fail(
+            'import nope from ".."',
+            'package-name',
+            testFilePath('default-import-match-filename/some-directory/a.js')
+        ),
+        fail(
+            'import nope from "../../index.js"',
+            'package-name',
+            testFilePath(
+                'default-import-match-filename/some-directory/foo/a.js'
+            )
+        ),
+        {
+            code: `import wrongName from './some-directory/a.js';`,
+            output: `import wrongName from './some-directory/a.js';`,
+            filename: testFilePath('default-import-match-filename/main.js'),
+            options: [{ ignorePaths: ['**/b.js', 'a.js', './a.js'] }],
+            errors: [{ message: getMessage('a.js') }],
+        },
         {
             code: 'import JordanHarband from "./NotJordanHarband.js";',
             output: 'import JordanHarband from "./NotJordanHarband.js";',
