@@ -1,7 +1,7 @@
 {
     "name": "eslint-plugin-default-export-name",
     "version": "0.0.0",
-    "description": "rules to consistently use default export names throughout the project.",
+    "description": "eslint plugin with rules to help use default export names consistently throughout the project.",
     "keywords": [
         "eslint",
         "eslintplugin",
