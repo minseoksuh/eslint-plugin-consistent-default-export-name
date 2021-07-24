@@ -21,13 +21,17 @@ How to use :
     {
         "extends": ["plugin:consistent-default-export-name/fix"]
     }
-    // sets below
-    // rules: {
-    //     'consistent-default-export-name/default-export-match-filename':
-    //         'error',
-    //     'consistent-default-export-name/default-import-match-filename':
-    //         'error',
-    // },
+    ```
+
+    which, sets below
+
+    ```json
+    {
+        "rules": {
+            "consistent-default-export-name/default-export-match-filename": "error",
+            "consistent-default-export-name/default-import-match-filename": "error"
+        }
+    }
     ```
 
 2. or set rules inidividually
@@ -36,7 +40,6 @@ How to use :
     {
         "rules": {
             "consistent-default-export-name/default-export-match-filename": "error",
-            "consistent-default-export-name/default-import-match-filename": "error"
         }
     }
     ```
