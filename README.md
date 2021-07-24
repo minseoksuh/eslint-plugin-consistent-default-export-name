@@ -1,50 +1,57 @@
-# eslint-plugin-consistent-default-export
+# eslint-plugin-consistent-default-export-name
 
-default-export-name = default-import-name = filename
+Adds rules to help use consistent "default export" names throughtout the project.
+
+This plugin is basically a packaging of two rules, each from two separate plugins:
+
+1. default-export-match-filename: checks when filename does not match its default export name
+
+    - Thanks to @golopot who wrote the rule and made PR to `eslint-plugin-import`
+
+2. default-import-match-filename: checks when default import name does not match its source filename
+    - Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
+
+If both rules are activated, default names will be consistent overall.
+
+How to use :
+
+1. either extend config which enables both rules
+
+    ```json
+    {
+        "extends": ["plugin:consistent-default-export-name/fix"]
+    }
+    // sets below
+    // rules: {
+    //     'consistent-default-export-name/default-export-match-filename':
+    //         'error',
+    //     'consistent-default-export-name/default-import-match-filename':
+    //         'error',
+    // },
+    ```
+
+2. or set rules inidividually
+
+    ```json
+    {
+        "rules": {
+            "consistent-default-export-name/default-export-match-filename": "error",
+            "consistent-default-export-name/default-import-match-filename": "error"
+        }
+    }
+    ```
 
 ## Installation
 
-You'll first need to install [ESLint](http://eslint.org):
-
-```
-$ npm i eslint --save-dev
+```shell
+npm install eslint-plugin-consistent-default-export --save-dev
 ```
 
-Next, install `eslint-plugin-consistent-default-export`:
-
-```
-$ npm install eslint-plugin-consistent-default-export --save-dev
-```
-
-
-## Usage
-
-Add `consistent-default-export` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
-
-```json
-{
-    "plugins": [
-        "consistent-default-export"
-    ]
-}
-```
-
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "consistent-default-export/rule-name": 2
-    }
-}
+```shell
+yarn add -D eslint-plugin-consistent-default-export
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-
-
-
+- default-export-match-filename
+- default-import-match-filename
