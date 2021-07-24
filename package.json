@@ -1,7 +1,7 @@
 {
-    "name": "eslint-plugin-default-export-name",
+    "name": "eslint-plugin-consistent-default-export-name",
     "version": "0.0.0",
-    "description": "eslint plugin with rules to help use default export names consistently throughout the project.",
+    "description": "eslint plugin with rules to help use default export names consistently throughout the project",
     "keywords": [
         "eslint",
         "eslintplugin",
@@ -28,5 +28,5 @@
     "engines": {
         "node": ">=0.10.0"
     },
-    "license": "ISC"
+    "license": "MIT"
 }

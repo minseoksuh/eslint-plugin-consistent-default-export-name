@@ -1,4 +1,4 @@
-var exportedRule = require('../../../lib/rules/filename'),
+var exportedRule = require('../../../lib/rules/default-export-match-filename'),
     RuleTester = require('eslint').RuleTester;
 
 var testCode = "var foo = 'bar';",

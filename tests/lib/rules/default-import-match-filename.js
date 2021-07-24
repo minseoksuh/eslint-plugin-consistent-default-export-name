@@ -1,6 +1,6 @@
 const { RuleTester } = require('eslint');
 
-const rule = require('../../../lib/rules/default-import-name');
+const rule = require('../../../lib/rules/default-import-match-filename');
 
 const path = require('path');
 
@@ -45,7 +45,7 @@ const parserOptions = {
     sourceType: 'module',
 };
 
-ruleTester.run('default-import-match-filename', rule, {
+ruleTester.run('default-import-name', rule, {
     valid: [
         'import Cat from "./cat"',
         'import cat from "./cat"',
