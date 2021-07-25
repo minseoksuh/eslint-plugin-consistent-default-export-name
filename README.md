@@ -8,11 +8,10 @@ Adds rules to help use consistent "default export" names throughtout the project
 This plugin is basically a packaging of two rules, each from two separate plugins:
 
 1. default-export-match-filename: checks when filename does not match its default export name
-
-    - Thanks to @golopot who wrote the rule and made PR to `eslint-plugin-import`
+    - Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
 
 2. default-import-match-filename: checks when default import name does not match its source filename
-    - Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
+    - Thanks to @golopot who wrote the rule and made PR to `eslint-plugin-import`
 
 If both rules are activated, default names will be consistent overall.
 
