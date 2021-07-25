@@ -2,6 +2,9 @@
 
 Adds rules to help use consistent "default export" names throughtout the project.
 
+> I DID NOT WRITE THE RULES.  
+> Authors mentioned below.
+
 This plugin is basically a packaging of two rules, each from two separate plugins:
 
 1. default-export-match-filename: checks when filename does not match its default export name
@@ -19,7 +22,7 @@ How to use :
 
     ```json
     {
-        "extends": ["plugin:consistent-default-export-name/fix"]
+        "extends": ["plugin:consistent-default-export-name/fixed"]
     }
     ```
 
