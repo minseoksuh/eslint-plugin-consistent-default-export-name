@@ -5,10 +5,6 @@ const rule = require('../../../lib/rules/default-import-match-filename');
 const path = require('path');
 
 function testFilePath(relativePath) {
-    console.log(
-        process.cwd(),
-        path.join(process.cwd(), './tests/files', relativePath)
-    );
     return path.join(process.cwd(), './tests/files', relativePath);
 }
 
