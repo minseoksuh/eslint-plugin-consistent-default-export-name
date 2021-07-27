@@ -7,7 +7,7 @@
         "eslintplugin",
         "eslint-plugin",
         "default export",
-        "defaut import"
+        "default import"
     ],
     "author": "minseoksuh",
     "main": "lib/index.js",
