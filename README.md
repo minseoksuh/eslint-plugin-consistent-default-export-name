@@ -2,20 +2,20 @@
 
 Adds rules to help use consistent "default export" names throughtout the project.
 
-> I DID NOT WRITE THE RULES.  
-> Authors mentioned below.
+This plugin is basically a repackaging of two rules, each from two separate plugins:
 
-This plugin is basically a packaging of two rules, each from two separate plugins:
+1. __default-export-match-filename__: checks when filename does not match its default export name
 
-1. default-export-match-filename: checks when filename does not match its default export name
-    - Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
-
-2. default-import-match-filename: checks when default import name does not match its source filename
-    - Thanks to @golopot who wrote the rule and made PR to `eslint-plugin-import`
+2. __default-import-match-filename__: checks when default import name does not match its source filename
 
 If both rules are activated, default names will be consistent overall.
 
-How to use :
+## I DID NOT WRITE THE RULES
+
+- Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
+- Thanks to @golopot who wrote the rule and made PR to `elint-plugin-import`
+
+## How To Use
 
 1. either extend config which enables both rules
 
@@ -45,6 +45,11 @@ How to use :
         }
     }
     ```
+
+## Rule Option & Documentation
+
+- [default-export-match-filename](./docs/rules/default-export-match-filename.md)
+- [default-import-match-filename](./docs/rules/default-import-match-filename.md)
 
 ## Installation
 

@@ -1,3 +1,7 @@
+/**
+ * @author Stefan Lau
+ */
+
 var exportedRule = require('../../../lib/rules/default-export-match-filename'),
     RuleTester = require('eslint').RuleTester;
 

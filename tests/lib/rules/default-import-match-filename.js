@@ -1,3 +1,7 @@
+/**
+ * @author Chiawen Chen (github: @golopot)
+ */
+
 const { RuleTester } = require('eslint');
 
 const rule = require('../../../lib/rules/default-import-match-filename');
