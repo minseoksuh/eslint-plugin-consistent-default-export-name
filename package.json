@@ -5,7 +5,9 @@
     "keywords": [
         "eslint",
         "eslintplugin",
-        "eslint-plugin"
+        "eslint-plugin",
+        "default export",
+        "defaut import"
     ],
     "author": "minseoksuh",
     "main": "lib/index.js",
