@@ -54,11 +54,11 @@ If both rules are activated, default names will be consistent overall.
 ## Installation
 
 ```shell
-npm install eslint-plugin-consistent-default-export --save-dev
+npm install eslint-plugin-consistent-default-export-name --save-dev
 ```
 
 ```shell
-yarn add -D eslint-plugin-consistent-default-export
+yarn add -D eslint-plugin-consistent-default-export-name
 ```
 
 ## Supported Rules
