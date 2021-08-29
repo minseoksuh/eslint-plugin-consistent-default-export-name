@@ -68,4 +68,4 @@ yarn add -D eslint-plugin-consistent-default-export-name
 
 ## Github
 
-[https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/edit/main/README.md](https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/edit/main/README.md)
+[https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/blob/main/README.md](https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/blob/main/README.md)
