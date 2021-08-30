@@ -1,6 +1,6 @@
 # eslint-plugin-consistent-default-export-name
 
-Adds rules to help use consistent "default export" names throughtout the project.
+Adds rules to help use consistent "default export" names throughout the project.
 
 This plugin is basically a repackaging of two rules, each from two separate plugins:
 
