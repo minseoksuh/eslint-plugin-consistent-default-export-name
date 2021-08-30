@@ -13,7 +13,7 @@ If both rules are activated, default names will be consistent overall.
 ## I DID NOT WRITE THE RULES
 
 - Thanks to @selaux who wrote the rule (filenames/match-exported) and made `eslint-plugin-filenames`
-- Thanks to @golopot who wrote the rule and made PR to `elint-plugin-import`
+- Thanks to @golopot who wrote the rule and made PR to `eslint-plugin-import`
 
 ## How To Use
 
