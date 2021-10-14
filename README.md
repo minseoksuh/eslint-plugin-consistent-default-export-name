@@ -5,10 +5,10 @@ Adds rules to help use consistent "default export" names throughout the project.
 This plugin is basically a repackaging of two rules, each from two separate plugins:
 
 1. __default-export-match-filename__: checks when filename does not match its default export name
-    ![default-export-match-filename.png](https://drive.google.com/uc?id=1YWw8AoFsq0umKovreHgi0HQd4wt4z_3z)
+    ![default-export-match-filename.png](./assets/default-export-match-filename.png)
 
 2. __default-import-match-filename__: checks when default import name does not match its source filename
-    ![default-import-match-filename.png](https://drive.google.com/uc?id=1gKPRykOxyr6Bw-g1dXTeytoLaD6vuoZX)
+    ![default-import-match-filename.png](./assets/default-import-match-filename.png)
 
 If both rules are activated, default names will be consistent overall.
 

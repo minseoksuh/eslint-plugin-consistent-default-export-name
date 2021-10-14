@@ -11,6 +11,12 @@
     ],
     "author": "minseoksuh",
     "main": "lib/index.js",
+    "files": [
+        "lib",
+        "docs",
+        "LICENSE",
+        "README.md"
+      ],
     "scripts": {
         "test": "mocha tests --recursive"
     },
