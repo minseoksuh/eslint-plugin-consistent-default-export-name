@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-consistent-default-export-name",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "homepage": "https://github.com/minseoksuh/eslint-plugin-consistent-default-export-name/blob/main/README.md",
     "description": "eslint plugin with rules to help use default export names consistently throughout the project",
     "keywords": [
